@@ -1,2 +1,2 @@
 #!/bin/bash
-javac -cp . engine/ComputeEngine.java
+javac -cp . ../src/engine/ComputeEngine.java

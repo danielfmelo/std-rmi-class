@@ -12,7 +12,7 @@ public class ComputePi {
 
         try {
 			//Remote Object name
-            String name = "Compute";
+            String name = "Daniel";
 			//Locate the Object Name Service (rmiregistry) as an argument (localhost)
             Registry registry = LocateRegistry.getRegistry("localhost");
 			//Instantiate the Remote Object connecting to it
@@ -22,7 +22,16 @@ public class ComputePi {
 			//Execute the Task (Like a local execution)
 			//Note that there's nothing here saying to send or receive data
             BigDecimal pi = comp.executeTask(task);
+            
+            Prime taskPrime = new Prime(Integer.parseInt("2003"));
+            long before = System.currentTimeMillis();
+            BigDecimal prime = comp.executeTask(taskPrime);
+            long after = System.currentTimeMillis();
+            //after = after-before;
+            System.out.println("tempo total "+(after-before));
             System.out.println(pi);
+            System.out.println(prime);
+
         } catch (Exception e) {
             System.err.println("ComputePi exception:");
             e.printStackTrace();

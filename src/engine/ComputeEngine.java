@@ -25,7 +25,7 @@ public class ComputeEngine implements Compute {
         
         try {
 			//The name of the Remote Object
-            String name = "Compute";
+            String name = "Daniel";
 			//Instace of ComputeEngine (Remote)
             Compute engine = new ComputeEngine();
 			//Generate Stubs in running time
